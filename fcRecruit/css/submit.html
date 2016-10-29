@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>提交成功</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+    <script src="http://www.ushangjing.com/usj-wechat/static/fcRecruit/js/jquery-1.10.2.min.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height:100%;
+            font-family:"microsoft yahei";
+            font-size: 20px;
+            width: 100%;
+            width:100%;
+            height:100%;
+            background:url(http://www.ushangjing.com/usj-wechat/static/fcRecruit/images/img-6/sub-bg.png) no-repeat left top;
+            background-size:100% 100%;
+        }
+       .logo img {
+           width: 40%;
+           margin-top: 50%;
+           margin-left: 30%;
+           align-content: center;
+       }
+
+        .return {
+            clear: both;
+            width: 100%;
+            position: relative;
+            text-align: center;
+        }
+        .return img{
+            clear: both;
+            margin-top: 30px;
+
+            width: 100px;
+            height: 50px;
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*margin-left: 30%;*/
+        }
+
+        .sumbitText {
+            position: absolute;
+            color: #FFFFFF;
+            font-size: 1rem;
+            text-align: center;
+            top: 50%;
+            left: 43%;
+            z-index: 2;
+        }
+
+     p {
+         margin-left: 10%;
+         width: 80%;
+         font-weight: 500;
+         margin-top: 20px;
+         color: #FFFFFF;
+         font-size: 25px;
+         text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="http://www.ushangjing.com/usj-wechat/static/fcRecruit/images/img-6/sub-logo.png" alt="">
+            <p >感谢您的参与,我们将尽快与您联系!</p>
+        </div>
+
+
+        <div class="return">
+            <img src="http://www.ushangjing.com/usj-wechat/static/fcRecruit/images/img-6/alert.png" alt="#">
+            <div class="sumbitText"><a>返回</a></div>
+        </div>
+    </div>
+</body>
+  <script>
+      $(document).ready(function () {
+
+          var  thisURL = document.URL;
+          var  getval =thisURL.split('?')[1];
+          var  peopleNum =getval.split('=')[1];
+
+          $(".return").click (function () {
+              location.href =  "http://www.ushangjing.com/usj-wechat/html/fcRecruit/index.html?peopleNum="+peopleNum;
+          })
+
+      });
+  </script>
+</html>
